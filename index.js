@@ -12,7 +12,7 @@ app.use(express.static('build'))
 app.use('/api/blogs', blogsRouter)
 
 const start = async () => {
-	const PORT = 3001
+	const PORT = process.env.PORT || 3001
 	await connectToDatabase()
 	await initializeDatabase()
 	app.listen(PORT, () => {
