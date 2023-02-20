@@ -9,18 +9,18 @@ const {
 	DB_URL } = require('../util/config')
 
 const pool = new Pool({
-	database: 'railway',
-	host: 'containers-us-west-191.railway.app',
-	port: 6172,
-	user: 'postgres',
-	password: '3UG5EmIbMsYruzGCWbbD',
-	connectionString: 'postgresql://postgres:3UG5EmIbMsYruzGCWbbD@containers-us-west-191.railway.app:6172/railway',
-	// database: DB_NAME,
-	// host: DB_HOST,
-	// port: DB_PORT,
-	// user: DB_USER,
-	// password: DB_PASSWORD,
-	// connectionString: DB_URL,
+	// database: 'railway',
+	// host: 'containers-us-west-191.railway.app',
+	// port: 6172,
+	// user: 'postgres',
+	// password: '3UG5EmIbMsYruzGCWbbD',
+	// connectionString: 'postgresql://postgres:3UG5EmIbMsYruzGCWbbD@containers-us-west-191.railway.app:6172/railway',
+	database: DB_NAME,
+	host: DB_HOST,
+	port: DB_PORT,
+	user: DB_USER,
+	password: DB_PASSWORD,
+	connectionString: DB_URL,
 })
 
 const connectToDatabase = async () => {
